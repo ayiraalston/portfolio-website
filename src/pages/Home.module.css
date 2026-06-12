@@ -1,0 +1,213 @@
+.main {
+  min-height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  flex: 1;
+  position: relative;
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.tagline {
+  margin-bottom: 24px;
+}
+
+.handwritten {
+  font-family: var(--font-hand);
+  font-size: 22px;
+  color: var(--white);
+}
+
+.nameBlock {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.nameTop,
+.nameBottom {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 7vw, 100px);
+  font-weight: 800;
+  line-height: 0.9;
+  color: var(--white);
+  letter-spacing: -1px;
+  position: relative;
+  z-index: 0;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+.foregroundPhoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--green);
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.foregroundImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.foregroundHint {
+  font-family: var(--font-hand);
+  font-size: 20px;
+  color: var(--black);
+  opacity: 0.35;
+  position: relative;
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 60px 48px 40px;
+}
+
+.nameMiddle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -12px;
+  position: relative;
+  z-index: 2;
+}
+
+.photoPlaceholder {
+  width: clamp(120px, 16vw, 220px);
+  height: clamp(160px, 22vw, 300px);
+  background: var(--pink);
+  border-radius: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--black);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.heroPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.photoText {
+  font-family: var(--font-hand);
+  font-size: 14px;
+  color: var(--black);
+  opacity: 0.5;
+}
+
+.roles {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.pill {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 2px solid var(--black);
+}
+
+.separator {
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--black);
+  opacity: 0.4;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  border: 2px solid var(--black);
+  transition: background 0.2s, color 0.2s;
+}
+
+.ctaBtn:hover {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.ctaLink .handwritten {
+  font-size: 18px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.ctaLink:hover .handwritten {
+  opacity: 1;
+}
+
+/* Marquee */
+.marqueeWrapper {
+  overflow: hidden;
+  background: var(--black);
+  padding: 14px 0;
+  border-top: 2px solid var(--black);
+}
+
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: scroll 18s linear infinite;
+}
+
+.marquee span {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: var(--yellow);
+  white-space: nowrap;
+  padding-right: 0;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

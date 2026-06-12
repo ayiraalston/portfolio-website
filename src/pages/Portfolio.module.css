@@ -1,0 +1,380 @@
+.main {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 60px 48px 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.titleRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(56px, 10vw, 120px);
+  line-height: 0.88;
+  letter-spacing: -1px;
+}
+
+.accent {
+  color: var(--pink-bright);
+  -webkit-text-stroke: 0px;
+}
+
+.accentGreen {
+  color: #2eb82e;
+}
+
+.handNote {
+  font-family: var(--font-hand);
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+/* Toggle */
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.toggleLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.35;
+  transition: opacity 0.2s;
+  min-width: 42px;
+}
+
+.toggleLabelActive {
+  opacity: 1;
+}
+
+.toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggleTrack {
+  width: 72px;
+  height: 36px;
+  background: var(--pink);
+  border: 2px solid var(--black);
+  border-radius: 999px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: background 0.35s ease;
+}
+
+.toggleTrackDev {
+  background: var(--green);
+}
+
+.toggleThumb {
+  position: absolute;
+  left: 4px;
+  width: 26px;
+  height: 26px;
+  background: var(--black);
+  border-radius: 50%;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.toggleThumbRight {
+  transform: translateX(36px);
+}
+
+.toggleIconLeft,
+.toggleIconRight {
+  position: absolute;
+  font-size: 13px;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.toggleIconLeft {
+  left: 6px;
+}
+
+.toggleIconRight {
+  right: 6px;
+}
+
+/* Divider */
+.divider {
+  height: 6px;
+  width: 100%;
+  transition: background 0.4s ease;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  padding: 2px;
+  animation: fadeUp 0.4s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  overflow: hidden;
+  animation: fadeUp 0.35s ease both;
+}
+
+.card:hover .cardImg {
+  filter: brightness(0.92);
+}
+
+.cardImg {
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: filter 0.2s;
+  border: 2px solid var(--black);
+}
+
+.cardImgHint {
+  font-family: var(--font-hand);
+  font-size: 16px;
+  opacity: 0.35;
+}
+
+.cardCategory {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: var(--black);
+  color: var(--white);
+  padding: 4px 10px;
+}
+
+.devCategory {
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+.cardInfo {
+  padding: 16px 4px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.cardDesc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  opacity: 0.55;
+  line-height: 1.5;
+}
+
+.cardDev .cardImg {
+  aspect-ratio: 16/9;
+}
+
+/* Modeling carousel */
+.carousel {
+  display: flex;
+  gap: 40px;
+  padding: 48px 48px 56px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  animation: fadeUp 0.4s ease both;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselCard {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp 0.35s ease both;
+}
+
+/* Photo pile */
+.photoStack {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+}
+
+.stackItem {
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.35s cubic-bezier(0.34, 1.3, 0.64, 1), filter 0.35s ease;
+}
+
+.stackTop {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+
+.photoStack:hover .stackTop {
+  transform: rotate(0deg) scale(1.02) !important;
+}
+
+.photoCounter {
+  font-family: 'Syne', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 4px 10px;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+}
+
+.carouselTitle {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  padding: 20px 2px 4px;
+}
+
+/* Parallax Instagram section */
+.parallaxSection {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.parallaxBg {
+  position: absolute;
+  inset: -20%;
+  background: var(--pink);
+  background-image: url('/images/instagram-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+.parallaxOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.parallaxContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.parallaxContentLeft {
+  align-self: flex-start;
+  margin-left: 6%;
+}
+
+.parallaxBgDev {
+  background: var(--yellow);
+  background-image: url('/images/linkedin-bg.jpg');
+  background-size: 110%;
+  background-position: center 5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.igBtn {
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 14px 36px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.igBtn:hover {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .header {
+    padding: 40px 24px 32px;
+  }
+}

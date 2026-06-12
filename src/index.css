@@ -1,0 +1,54 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #FFFFFF;
+  --black: #0A0A0A;
+  --pink: #F4A7B9;
+  --pink-bright: #FF6B9D;
+  --yellow: #FFE44D;
+  --green: #B8F0A0;
+  --red: #FF2D2D;
+  --cream: #FAF7F2;
+
+  --font-display: 'Syne', sans-serif;
+  --font-editorial: 'Syne', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-hand: 'Syne', sans-serif;
+  --font-title: 'Anton', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--black);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--black);
+}

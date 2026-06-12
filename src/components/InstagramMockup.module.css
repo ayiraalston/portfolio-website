@@ -1,0 +1,124 @@
+.mockup {
+  width: 340px;
+  max-width: 90vw;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  padding: 20px;
+  color: var(--white);
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header row */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatarRing {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  padding: 2px;
+}
+
+.avatarImg {
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.statsBlock {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+}
+
+.statLabel {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.5px;
+}
+
+/* Bio */
+.bio {
+  margin-bottom: 16px;
+  padding-left: 2px;
+}
+
+.handle {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--white);
+  letter-spacing: 0.3px;
+}
+
+.name {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 2px;
+}
+
+.bioText {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gridCell {
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.gridCell:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.gridHint {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+}
