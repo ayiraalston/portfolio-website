@@ -12,7 +12,7 @@ const PERSONALITIES = [
     id: 2,
     img: '/images/personality-2.png',
     label: '4 the culture',
-    desc: "Since I was little, I've had an interest in Japanese culture, from watching anime as a kid to now studying abroad in Tokyo and spending a year learning the language. I love learning more about Japan and its rich culture.",
+    desc: "Since I was little, I've had an interest in Japanese culture, from watching anime as a kid to now studying abroad in Tokyo and spending a year learning the language collegiately. I love learning more about Japan and its rich culture.",
   },
   {
     id: 3,
